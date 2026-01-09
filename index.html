@@ -13,77 +13,8 @@
     gtag('js', new Date());
     gtag('config', 'G-T5086YL02K');
   </script>
-  <style>
-    /* Стили модального окна */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.8);
-      align-items: center;
-      justify-content: center;
-    }
-    .modal-content {
-      background: linear-gradient(135deg, #2a2a40, #1e1e2f);
-      padding: 40px;
-      border-radius: 20px;
-      text-align: center;
-      max-width: 500px;
-      box-shadow: 0 0 40px rgba(110, 86, 207, 0.8);
-    }
-    .modal h2 {
-      color: #6e56cf;
-    }
-    .modal input {
-      width: 90%;
-      padding: 15px;
-      margin: 10px 0;
-      border-radius: 50px;
-      border: none;
-    }
-    .modal button {
-      background: #6e56cf;
-      color: white;
-      padding: 15px 40px;
-      border: none;
-      border-radius: 50px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .modal button:hover {
-      background: #bb86fc;
-    }
-    .close {
-      color: #aaa;
-      float: right;
-      font-size: 32px;
-      cursor: pointer;
-    }
-    .close:hover {
-      color: white;
-    }
-  </style>
 </head>
 <body>
-
-  <!-- Модальное окно регистрации -->
-  <div id="registerModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">×</span>
-      <h2>🔑 Зарегистрируйся для полного доступа</h2>
-      <p>Получи премиум-способы и личные рекомендации</p>
-      <form action="https://formspree.io/f/ТВОЙ_КОД_FORMSPREE" method="POST">
-        <input type="text" name="name" placeholder="Твоё имя" required>
-        <input type="email" name="email" placeholder="Твой email" required>
-        <button type="submit">Зарегистрироваться бесплатно</button>
-      </form>
-      <p><small>Данные защищены • Только полезный контент</small></p>
-    </div>
-  </div>
 
   <header>
     <h1>💰 Заработок в интернете 2026</h1>
@@ -96,6 +27,7 @@
     <a href="#tips">Советы</a>
     <a href="#earnings">Заработок</a>
     <a href="#health">Здоровье</a>
+    <a href="#reviews">Отзывы</a>
     <a href="#faq">FAQ</a>
   </nav>
 
@@ -171,7 +103,26 @@
           <p>Натуральный крем от болей в суставах (акция!)</p>
           <a href="#" target="_blank">Заказать со скидкой →</a>
         </div>
-        <p><small>После одобрения в KMA заменю на партнёрскую ссылку</small></p>
+        <p><small>После одобрения в KMA заменю на партнёрскую ссылку — комиссия за заказы</small></p>
+      </section>
+
+      <section id="reviews">
+        <h2>⭐ Отзывы читателей</h2>
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Отзывы" style="width:100%; border-radius:15px; margin:20px 0;">
+        <div class="grid-cards">
+          <div class="card">
+            <p>"На Kwork за месяц вышел на 25 000 ₽! Спасибо за советы"</p>
+            <p><strong>Алексей, Москва</strong></p>
+          </div>
+          <div class="card">
+            <p>"Skillbox помог найти работу дизайнером. Рекомендую!"</p>
+            <p><strong>Марина, СПб</strong></p>
+          </div>
+          <div class="card">
+            <p>"Osteofast спас от болей в спине. Заказал по акции"</p>
+            <p><strong>Сергей, 45 лет</strong></p>
+          </div>
+        </div>
       </section>
 
       <section id="faq">
@@ -185,80 +136,49 @@
     </div>
 
     <aside>
-      <h2>📌 Категории</h2>
+      <h2>📌 Быстрый доступ</h2>
       <ul>
-        <li><a href="#intro">Введение</a></li>
         <li><a href="#top-ways">ТОП способы</a></li>
         <li><a href="#tips">Советы</a></li>
-        <li><a href="#earnings">Заработок</a></li>
         <li><a href="#health">Здоровье</a></li>
-        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#reviews">Отзывы</a></li>
       </ul>
 
-      <h2>🔥 Горячая рекомендация</h2>
+      <h2>🔥 Горячее</h2>
       <div class="card">
         <h3>Osteofast</h3>
         <p>Крем от болей в суставах</p>
-        <a href="#" target="_blank">Узнать подробнее →</a>
+        <a href="#" target="_blank">Акция →</a>
       </div>
+
+      <h2>📩 Связь</h2>
+      <p>Email: твой@email.com</p>
+      <p>Telegram: @твой_ник</p>
     </aside>
   </main>
 
   <footer>
-    <p>© 2026 Мой сайт | Заработок без вложений</p>
+    <p>© 2026 Мой сайт | Заработок без вложений | Все права защищены</p>
+    <p><a href="#intro">Наверх ↑</a></p>
   </footer>
 
+  <!-- Кнопка "Наверх" -->
+  <button onclick="topFunction()" id="toTopBtn" style="position:fixed; bottom:20px; right:20px; background:#6e56cf; color:white; padding:15px; border:none; border-radius:50%; cursor:pointer; display:none;">↑</button>
+
   <script>
-    window.onload = function() {
-      if (!localStorage.getItem('registered')) {
-        setTimeout(function() {
-          document.getElementById('registerModal').style.display = 'flex';
-        }, 3000);
+    // Кнопка "Наверх"
+    window.onscroll = function() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("toTopBtn").style.display = "block";
+      } else {
+        document.getElementById("toTopBtn").style.display = "none";
       }
     };
 
-    var form = document.querySelector('#registerModal form');
-    if (form) {
-      form.addEventListener('submit', function(e) {
-        localStorage.setItem('registered', 'true');
-
-        document.querySelector('#registerModal .modal-content').innerHTML = `
-          <span class="close" onclick="closeModal()">×</span>
-          <h2>Спасибо за регистрацию! 🔥</h2>
-          <p>Доступ открыт. Новые способы на email.</p>
-        `;
-
-        setTimeout(closeModal, 4000);
-      });
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
     }
-
-    function closeModal() {
-      document.getElementById('registerModal').style.display = 'none';
-    }
-
-    window.onclick = function(event) {
-      var modal = document.getElementById('registerModal');
-      if (event.target == modal) {
-        closeModal();
-      }
-    }
-    <!-- modify this form HTML and place wherever you want your form -->
-<form
-  action="https://bannop2007-png.github.io/my-site/"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
   </script>
 </body>
 </html>
-

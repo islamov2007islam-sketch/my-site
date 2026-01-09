@@ -14,7 +14,7 @@
     gtag('config', 'G-T5086YL02K');
   </script>
   <style>
-    /* Стили для модального окна */
+    /* Стили модального окна */
     .modal {
       display: none;
       position: fixed;
@@ -23,41 +23,28 @@
       top: 0;
       width: 100%;
       height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.7);
+      background-color: rgba(0,0,0,0.8);
       align-items: center;
       justify-content: center;
     }
-
     .modal-content {
       background: linear-gradient(135deg, #2a2a40, #1e1e2f);
       padding: 40px;
       border-radius: 20px;
       text-align: center;
       max-width: 500px;
-      box-shadow: 0 0 30px rgba(110, 86, 207, 0.8);
-      animation: modalopen 1s;
+      box-shadow: 0 0 40px rgba(110, 86, 207, 0.8);
     }
-
-    @keyframes modalopen {
-      from {opacity: 0; transform: scale(0.8);}
-      to {opacity: 1; transform: scale(1);}
-    }
-
     .modal h2 {
       color: #6e56cf;
-      margin-bottom: 20px;
     }
-
-    .modal input[type="email"] {
-      width: 80%;
+    .modal input {
+      width: 90%;
       padding: 15px;
-      margin: 20px 0;
+      margin: 10px 0;
       border-radius: 50px;
       border: none;
-      font-size: 1.1em;
     }
-
     .modal button {
       background: #6e56cf;
       color: white;
@@ -66,21 +53,16 @@
       border-radius: 50px;
       font-weight: bold;
       cursor: pointer;
-      transition: background 0.3s;
     }
-
     .modal button:hover {
       background: #bb86fc;
     }
-
     .close {
       color: #aaa;
       float: right;
-      font-size: 28px;
-      font-weight: bold;
+      font-size: 32px;
       cursor: pointer;
     }
-
     .close:hover {
       color: white;
     }
@@ -89,18 +71,20 @@
 <body>
 
   <!-- Модальное окно регистрации -->
-  <div id="subscribeModal" class="modal">
+  <div id="registerModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal()">×</span>
-      <h2>🔥 Не упусти новые способы заработка!</h2>
-      <p>Подпишись и получай свежие методы заработка без вложений каждую неделю</p>
-      <input type="email" placeholder="Твой email" required>
-      <button onclick="subscribe()">Подписаться бесплатно</button>
-      <p><small>Мы не спамим — только полезное</small></p>
+      <h2>🔑 Зарегистрируйся для полного доступа</h2>
+      <p>Получи премиум-способы и личные рекомендации</p>
+      <form action="https://formspree.io/f/ТВОЙ_КОД_FORMSPREE" method="POST">
+        <input type="text" name="name" placeholder="Твоё имя" required>
+        <input type="email" name="email" placeholder="Твой email" required>
+        <button type="submit">Зарегистрироваться бесплатно</button>
+      </form>
+      <p><small>Данные защищены • Только полезный контент</small></p>
     </div>
   </div>
 
-  <!-- Основной контент сайта (всё как было) -->
   <header>
     <h1>💰 Заработок в интернете 2026</h1>
     <p>Проверенные способы для новичков без вложений и рисков</p>
@@ -117,23 +101,55 @@
 
   <main>
     <div>
-      <!-- Всё остальное содержимое как раньше (введение, ТОП, советы и т.д.) -->
-      <!-- Я вставлю сокращённо, но в твоём файле оставь полный контент из предыдущего сообщения -->
-
       <section id="intro">
         <h2>🔥 Почему сейчас лучшее время начинать?</h2>
         <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Заработок онлайн" style="width:100%; border-radius:15px; margin:20px 0;">
         <p>В 2026 году рынок фриланса вырос в 2 раза. Миллионы людей зарабатывают от 30 000 ₽ в месяц из дома. Ты тоже можешь — начни сегодня!</p>
       </section>
 
-      <!-- Остальные разделы с карточками, картинками и т.д. — скопируй из предыдущего кода -->
+      <section id="top-ways">
+        <h2>🚀 ТОП-6 способов заработка без вложений</h2>
+        <img src="https://images.unsplash.com/photo-1542744095-291d1f67a001?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Фриланс задания" style="width:100%; border-radius:15px; margin:20px 0;">
+        <div class="grid-cards">
+          <div class="card">
+            <h3>Kwork.ru</h3>
+            <p>Простые задания от 500 ₽</p>
+            <a href="https://kwork.ru/" target="_blank">Перейти →</a>
+          </div>
+          <div class="card">
+            <h3>FL.ru</h3>
+            <p>Проекты от 5000 ₽</p>
+            <a href="https://www.fl.ru/" target="_blank">Перейти →</a>
+          </div>
+          <div class="card">
+            <h3>Upwork</h3>
+            <p>Заказы от $100</p>
+            <a href="https://upwork.com/" target="_blank">Перейти →</a>
+          </div>
+          <div class="card">
+            <h3>Skillbox</h3>
+            <p>Курсы с трудоустройством</p>
+            <a href="https://skillbox.ru/" target="_blank">Перейти →</a>
+          </div>
+          <div class="card">
+            <h3>Netology</h3>
+            <p>Профессии будущего</p>
+            <a href="https://netology.ru/" target="_blank">Перейти →</a>
+          </div>
+          <div class="card">
+            <h3>Avito</h3>
+            <p>Продажа услуг и вещей</p>
+            <a href="https://www.avito.ru/" target="_blank">Перейти →</a>
+          </div>
+        </div>
+      </section>
 
-      <!-- ... (весь контент из предыдущего сообщения) ... -->
+      <!-- Остальные разделы (советы, заработок, здоровье, FAQ) — добавь из предыдущего кода или скажи, если нужно полный с ними -->
 
     </div>
 
     <aside>
-      <!-- Боковая панель как раньше -->
+      <!-- Боковая панель с категориями и рекомендацией Osteofast -->
     </aside>
   </main>
 
@@ -141,40 +157,43 @@
     <p>© 2026 Мой сайт | Заработок без вложений</p>
   </footer>
 
-<script>
-  // Проверяем, зарегистрирован ли пользователь (используем localStorage)
+  <script>
+  // Показываем модальное окно, если пользователь ещё не "зарегистрирован"
   window.onload = function() {
     if (!localStorage.getItem('registered')) {
-      // Показываем модальное окно через 3 секунды после загрузки
       setTimeout(function() {
         document.getElementById('registerModal').style.display = 'flex';
-      }, 3000); // 3000 = 3 секунды задержки (можно изменить на 0 для сразу)
+      }, 3000); // 3 секунды задержки перед показом
     }
   };
 
-  // Закрытие модального окна по крестику
+  // Закрытие по крестику
   function closeModal() {
     document.getElementById('registerModal').style.display = 'none';
   }
 
   // Обработка отправки формы
-  document.querySelector('#registerModal form').addEventListener('submit', function(e) {
-    // Разрешаем отправку на Formspree
-    // e.preventDefault(); // не блокируем, чтобы Formspree получил данные
+  var form = document.querySelector('#registerModal form');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      // Не блокируем отправку — Formspree получит данные
+      // e.preventDefault(); // закомментировано, чтобы данные ушли
 
-    // Сохраняем флаг регистрации
-    localStorage.setItem('registered', 'true');
+      // Сохраняем флаг, что зарегистрирован
+      localStorage.setItem('registered', 'true');
 
-    // Показываем спасибо и закрываем через 2 секунды
-    document.querySelector('#registerModal .modal-content').innerHTML = `
-      <span class="close" onclick="closeModal()">×</span>
-      <h2>Спасибо за регистрацию! 🔥</h2>
-      <p>Доступ открыт. Теперь ты видишь все способы заработка.</p>
-      <p>Письмо с подтверждением придёт на email.</p>
-    `;
+      // Меняем содержимое модального окна на "Спасибо"
+      document.querySelector('#registerModal .modal-content').innerHTML = `
+        <span class="close" onclick="closeModal()">×</span>
+        <h2>Спасибо за регистрацию! 🔥</h2>
+        <p>Доступ открыт. Данные отправлены — скоро новые способы на email!</p>
+        <p>Окно закроется автоматически...</p>
+      `;
 
-    setTimeout(closeModal, 3000); // закрываем через 3 секунды
-  });
+      // Автоматически закрываем через 4 секунды
+      setTimeout(closeModal, 4000);
+    });
+  }
 
   // Закрытие по клику вне окна
   window.onclick = function(event) {
@@ -186,4 +205,3 @@
 </script>
 </body>
 </html>
-

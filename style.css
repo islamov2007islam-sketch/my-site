@@ -16,15 +16,16 @@ header {
 
 nav {
   background: rgba(40, 40, 60, 0.8);
-  padding: 10px 0;
+  padding: 15px 0;
   text-align: center;
 }
 
 nav a {
   color: #bb86fc;
-  margin: 0 15px;
+  margin: 0 20px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.1em;
 }
 
 nav a:hover {
@@ -51,21 +52,67 @@ main {
   margin: 40px auto;
   padding: 20px;
   display: grid;
-  grid-template-columns: 2fr 1fr; /* Основная колонка + боковая */
+  grid-template-columns: 2fr 1fr;
   gap: 30px;
 }
 
 section {
   background: rgba(50, 50, 80, 0.4);
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 aside {
   background: rgba(40, 40, 60, 0.6);
   border-radius: 15px;
-  padding: 20px;
+  padding: 25px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.card {
+  background: rgba(80, 80, 120, 0.4);
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  transform: translateY(-15px);
+  background: rgba(110, 86, 207, 0.4);
+  box-shadow: 0 15px 30px rgba(110, 86, 207, 0.3);
+}
+
+.card h3 {
+  color: #bb86fc;
+  margin-bottom: 15px;
+}
+
+.card p {
+  margin-bottom: 20px;
+}
+
+.card a {
+  display: inline-block;
+  background: #6e56cf;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.card a:hover {
+  background: #bb86fc;
 }
 
 ul {
@@ -75,41 +122,33 @@ ul {
 
 li {
   margin: 15px 0;
-  padding: 15px;
-  background: rgba(80, 80, 120, 0.3);
-  border-radius: 10px;
-  transition: transform 0.3s;
-}
-
-li:hover {
-  transform: translateX(10px);
-  background: rgba(110, 86, 207, 0.3);
 }
 
 a {
   color: #bb86fc;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.1em;
 }
 
 a:hover {
   color: #ffffff;
-  text-decoration: underline;
 }
 
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 30px;
   background: rgba(30, 30, 47, 0.9);
   margin-top: 50px;
   font-size: 0.9em;
-  grid-column: span 2; /* На всю ширину */
+  grid-column: span 2;
 }
 
-/* Для мобильных */
 @media (max-width: 800px) {
   main {
     grid-template-columns: 1fr;
+  }
+  nav a {
+    display: block;
+    margin: 10px 0;
   }
 }
